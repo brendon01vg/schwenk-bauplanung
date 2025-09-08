@@ -8,7 +8,7 @@
 @font-face {
   font-family: "InterMedium";
   src: url("../assets/fonts/Inter-Medium.woff2") format("woff2"), url("../assets/fonts/Inter-Medium.woff") format("woff");
-  font-weight: 500;
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
@@ -28,6 +28,7 @@
 }
 html {
   font-size: 20px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -57,6 +58,7 @@ h3 {
   font-size: 2rem;
   line-height: 123%;
   font-weight: inherit;
+  margin: 0;
 }
 
 h4 {
@@ -64,6 +66,7 @@ h4 {
   font-size: 1.5rem;
   line-height: 123%;
   font-weight: inherit;
+  margin: 0;
 }
 
 p {
@@ -71,6 +74,7 @@ p {
   font-size: 1rem;
   line-height: 123%;
   font-weight: inherit;
+  margin-top: 0;
 }
 
 .container {
@@ -86,22 +90,28 @@ p {
   color: #ffffff;
   font-family: "SpaceGrotesk", sans-serif;
   font-size: 0.8rem;
-  line-height: 100%;
+  line-height: 1;
   padding: 0.5rem;
   border-radius: 5px;
   width: max-content;
   text-transform: uppercase;
 }
 
+.lead {
+  font-family: "InterBold", sans-serif;
+  font-size: 1.2rem;
+}
+
 .nav-link {
   color: #000000;
   font-family: "SpaceGrotesk", sans-serif;
   font-size: 0.75rem;
-  line-height: 100%;
+  line-height: 1;
   text-transform: uppercase;
 }
 
 nav {
+  z-index: 1000;
   position: fixed;
   background-color: rgba(235, 235, 235, 0.66);
   margin-top: 1rem;
@@ -160,6 +170,126 @@ nav ul li .tag {
   z-index: 2;
   margin: 0;
   padding-bottom: 1rem;
+}
+
+.ansprechpartner {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  margin-top: 6rem;
+}
+.ansprechpartner div {
+  grid-column: span 4;
+  margin-right: 1rem;
+}
+
+.ablauf-nav {
+  margin-top: 6rem;
+  display: grid;
+  grid-auto-flow: column;
+}
+.ablauf-nav a {
+  text-decoration: none;
+  color: #000000;
+  display: grid;
+}
+.ablauf-nav a span {
+  margin-top: 0.725rem;
+}
+
+#baupartner .container {
+  margin-top: 9rem;
+}
+#baupartner .container .img-text {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1rem;
+}
+#baupartner .container .img-text:first-child {
+  grid-column: span 2;
+}
+#baupartner .container .img-text h3 {
+  grid-column: span 4;
+}
+#baupartner .container .grid-img {
+  margin-top: 9rem;
+}
+#baupartner .container .grid-img-2 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+#baupartner .container .grid-img-2 .img-1 {
+  grid-area: 2/1/6/3;
+}
+#baupartner .container .grid-img-2 .img-2 {
+  grid-area: 1/3/4/7;
+  margin-bottom: 9rem;
+}
+#baupartner .container .card-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 1rem;
+}
+#baupartner .container .card-wrapper .card h4 {
+  margin-top: 1.5rem;
+}
+#baupartner .container .xp-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-gap: 1rem;
+  margin-top: 6rem;
+  margin-bottom: 9rem;
+}
+#baupartner .container .xp-wrapper .xp-card {
+  display: grid;
+  border-left: 0.25rem #1BB8D5 solid;
+  padding-left: 1.5rem;
+}
+#baupartner .container .xp-wrapper .xp-card .xp-header {
+  font-family: "SpaceGrotesk", sans-serif;
+  font-size: 4.5rem;
+  color: #1BB8D5;
+}
+
+#dienstleistungen .swiper {
+  width: 100%;
+  margin-bottom: 9rem;
+}
+#dienstleistungen .swiper .swiper-wrapper {
+  padding-left: calc((100vw - 72rem) / 2);
+  box-sizing: border-box;
+}
+#dienstleistungen .swiper .swiper-wrapper .swiper-slide {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#dienstleistungen .swiper .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  height: 32.3rem;
+  object-fit: cover;
+}
+#dienstleistungen .swiper .swiper-scrollbar {
+  width: 15rem;
+  margin-left: calc((100vw - 72rem) / 2);
+  position: relative;
+  top: 0;
+  left: 0;
+  background: #EBEBEB;
+  margin-bottom: 1.5rem;
+}
+#dienstleistungen .swiper .swiper-scrollbar .swiper-scrollbar-drag {
+  background: #1BB8D5;
+  border-radius: 0;
+}
+#dienstleistungen h4 {
+  margin-top: 1.5rem;
+}
+#dienstleistungen p {
+  margin-top: 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
