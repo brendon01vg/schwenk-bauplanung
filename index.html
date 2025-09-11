@@ -11,16 +11,16 @@
 <section id="hero">
     <div class="container">
         <header>
-        <nav>
-            <a href="#"><img src="assets/vectors/logo.svg" alt="Logo Schwenk Bauplan"/></a>
-            <ul>
-                <li><a href="#baupartner" class="nav-link">Baupartner</a></li>
-                <li><a href="#dienstleistungen" class="nav-link">Leistungen</a></li>
-                <li><a href="#projekte" class="nav-link">Projekte</a></li>
-                <li><a href="#team" class="nav-link">Team</a></li>
-                <li><a href="#kontakt" class="tag nav-link">Kontakt</a></li>
-            </ul>
-        </nav>
+            <nav>
+                <a href="#"><img src="assets/vectors/logo.svg" alt="Logo Schwenk Bauplan"/></a>
+                <ul>
+                    <li><a href="#baupartner" class="nav-link">Baupartner</a></li>
+                    <li><a href="#dienstleistungen" class="nav-link">Leistungen</a></li>
+                    <li><a href="#projekte" class="nav-link">Projekte</a></li>
+                    <li><a href="#team" class="nav-link">Team</a></li>
+                    <li><a href="#kontakt" class="tag nav-link">Kontakt</a></li>
+                </ul>
+            </nav>
     </header>
         <h1 class="hero-text">Ihr Partner für Neubau<br/>und Modernisierung</h1>
         <img src="assets/vectors/hero-mood.svg" class="hero-mood" alt="Hero Vektor"/>
@@ -85,7 +85,7 @@
                 <div class="card">
                     <img src="assets/images/image_9.jpg" alt="Image 9" />
                     <h4>
-                        Planung und Ausführung <br/>für Ihr Bauvorhaben
+                        Planung und Ausführung für Ihr Bauvorhaben
                     </h4>
                 </div>
                 <div class="card">
@@ -142,30 +142,33 @@
         </div>
         <div class="container-fluid">
             <span class="margin-left"></span>
-            <div class="swiper">
-                <div class="swiper-scrollbar"></div>
+            <div class="swiper-dienstleistungen">
+                <div class="container">
+                    <div class="swiper-scrollbar"></div>
+                </div>
+
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" id="bauplanung">
                         <img src="assets/images/bauplanung.jpg" alt="Bauplanung Img">
                         <h4>Bauplanung</h4>
                         <p>
                             Wir koordinieren Ihr Projekt von der Entwurfsphase bis zur statisch geprüften Ausführung, einschließlich Entwurfs-, Genehmigungs-, Werk- und Statikplanung, optimal abgestimmt auf die Anforderungen Ihres Bauvorhabens.
                         </p>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" id="bauleitung">
                         <img src="assets/images/bauleitung.jpg" alt="Bauleitung Img">
                         <h4>Bauleitung</h4>
                         <p>
                             Unsere Bauleitung gewährleistet den Überblick und den Fortschritt auf Ihrer Baustelle – von der Koordination der Gewerke bis zur finalen Abnahme. Dazu zählen Bauablauf, Organisation, Baubetreuung sowie Ausschreibung und Rechnungsprüfung.                    </p>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" id="energieberatung">
                         <img src="assets/images/energieberatung.jpg" alt="Energieberatung Img">
                         <h4>Energieberatung</h4>
                         <p>
                             Im Rahmen unserer Energieberatung analysieren wir Optionen zur energetischen Optimierung und unterstützen Sie bei der Planung effektiver Maßnahmen für nachhaltige Entscheidungen.                    </p>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide" id="modernisierung">
                         <img src="assets/images/modernisierung.jpg" alt="Modernisierung Img">
                         <h4>Modernisierung</h4>
                         <p>
@@ -173,21 +176,334 @@
                     </div>
 
                 </div>
-                <div class="swiper-button-next"></div>
+                <div class="swiper-button-next">
+                    <svg width="53" height="73" viewBox="0 0 38 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.3668 33.6605L17.1535 30.4829L28.3108 19.3257H0.283761V14.6843H28.3108L17.1535 3.54487L20.3668 0.349433L37.0223 17.005L20.3668 33.6605Z" fill="#1BB8D5"/>
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="projekte">
+        <div class="container">
+            <div style="margin-bottom: 1.7rem;">
+                <span class="tag">Projekte</span>
+            </div>
+            <h2>
+                Unsere Projekte
+            </h2>
+        </div>
+        <div class="container-fluid">
+            <span class="margin-left"></span>
+            <div class="swiper-projekte">
+                <div class="container">
+                    <div class="swiper-scrollbar"></div>
+                </div>
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="assets/images/bauleitung.jpg" alt="Einfamilienhaus Bild">
+                        <div class="projekte-content">
+                            <div>
+                                <h4>Einfamilienhaus Muster</h4>
+                                <p>
+                                    Modernes Einfamilienhaus mit energieeffizienter Bauweise und stilvollem Design.
+                                </p>
+                            </div>
+                            <div class="tag-wrapper">
+                                <span class="tag gray">Einfamilienhaus</span>
+                                <span class="tag gray">Bauplanung</span>
+                                <span class="tag gray">2019</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/gewerbebau.jpg" alt="Gewerbebau Bild">
+                        <div class="projekte-content">
+                            <div>
+                                <h4>Gewerbebau Beispiel</h4>
+                                <p>
+                                    Innovativer Gewerbebau mit modernen Arbeitsplätzen und nachhaltigen Lösungen.
+                                </p>
+                            </div>
+                            <div class="tag-wrapper">
+                                <span class="tag gray">Gewerbe</span>
+                                <span class="tag gray">Schlüsselfertig</span>
+                                <span class="tag gray">Bauplanung & Bauleitung</span>
+                                <span class="tag gray">2021/22</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/bauleitung.jpg" alt="Einfamilienhaus Bild">
+                        <div class="projekte-content">
+                            <div>
+                                <h4>Umbau Beispiel</h4>
+                                <p>
+                                    Umbau eines historischen Gebäudes in moderne Wohnräume mit Charme.
+                                </p>
+                            </div>
+                            <div class="tag-wrapper">
+                                <span class="tag gray">Einfamilienhaus</span>
+                                <span class="tag gray">Bauplanung</span>
+                                <span class="tag gray">2019</span>
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
+                <div class="swiper-button-next">
+                    <svg width="53" height="73" viewBox="0 0 38 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.3668 33.6605L17.1535 30.4829L28.3108 19.3257H0.283761V14.6843H28.3108L17.1535 3.54487L20.3668 0.349433L37.0223 17.005L20.3668 33.6605Z" fill="#1BB8D5"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="impressions">
+        <div class="container">
+            <h2>
+                Das sagen andere
+            </h2>
+        </div>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="swiper-impressions">
+                    <div class="pagination-wrapper">
+                        <div class="swiper-pagination"></div>
+                        <div class="buttons-wrapper">
+                            <div class="swiper-button-prev">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="50" y="50" width="50" height="50" rx="8.62069" transform="rotate(-180 50 50)" fill="#1BB8D5"/>
+                                    <path d="M23.9024 14.3154L26.0165 16.4061L18.6758 23.7468L37.1157 23.7468L37.1157 26.8005L18.6758 26.8005L26.0165 34.1295L23.9024 36.2319L12.9442 25.2737L23.9024 14.3154Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="swiper-button-next">
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="50" height="50" rx="8.62069" fill="#1BB8D5"/>
+                                    <path d="M26.0976 36.4346L23.9835 34.3439L31.3242 27.0032L12.8843 27.0032V23.9495L31.3242 23.9495L23.9835 16.6205L26.0976 14.5181L37.0558 25.4763L26.0976 36.4346Z" fill="white"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="quote">
+                                <h3>
+                                    “Oliver Schwenk ist Ihr kompetenter Ansprechpartner für die Planung Ihres Neubaus oder Umbaus. Ein Baupartner mit über 17 Jahren Erfahrung. 2001 als Maurer & staatlich geprüften Bautechniker.”
+
+                                </h3>
+                                <h3 class="author">
+                                    — Max Mustermann, Firma X
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="quote">
+                                <h3>
+                                    “Oliver Schwenk ist Ihr kompetenter Ansprechpartner für die Planung Ihres Neubaus oder Umbaus. Ein Baupartner mit über 17 Jahren Erfahrung. 2001 als Maurer & staatlich geprüften Bautechniker.”
+
+                                </h3>
+                                <h3 class="author">
+                                    — Max Mustermann, Firma X
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="quote">
+                                <h3>
+                                    “Oliver Schwenk ist Ihr kompetenter Ansprechpartner für die Planung Ihres Neubaus oder Umbaus. Ein Baupartner mit über 17 Jahren Erfahrung. 2001 als Maurer & staatlich geprüften Bautechniker.”
+
+                                </h3>
+                                <h3 class="author">
+                                    — Max Mustermann, Firma X
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="quote">
+                                <h3>
+                                    “Oliver Schwenk ist Ihr kompetenter Ansprechpartner für die Planung Ihres Neubaus oder Umbaus. Ein Baupartner mit über 17 Jahren Erfahrung. 2001 als Maurer & staatlich geprüften Bautechniker.”
+
+                                </h3>
+                                <h3 class="author">
+                                    — Max Mustermann, Firma X
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="quote">
+                                <h3>
+                                    “Oliver Schwenk ist Ihr kompetenter Ansprechpartner für die Planung Ihres Neubaus oder Umbaus. Ein Baupartner mit über 17 Jahren Erfahrung. 2001 als Maurer & staatlich geprüften Bautechniker.”
+
+                                </h3>
+                                <h3 class="author">
+                                    — Max Mustermann, Firma X
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="team">
+        <div class="container">
+            <div style="margin-bottom: 1.7rem;">
+                <span class="tag">Team</span>
+            </div>
+            <h2>
+                Unser Team
+            </h2>
+        </div>
+        <div class="container-fluid">
+            <span class="margin-left"></span>
+            <div class="swiper-team">
+                <div class="container">
+                    <div class="swiper-scrollbar"></div>
+                </div>
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="assets/images/Oliver-Schwenk.jpg" alt="Oliver Schwenk Bild" style="max-width: 20.75rem">
+                        <div class="team-content">
+                            <h4>Oliver Schwenk</h4>
+                            <p>Geschäftsführer</p>
+                        </div>
+                        <p>
+                            Leitet das Unternehmen mit Leidenschaft und Expertise. Ist seit 17 Jahren in diesem Bereich tätig.
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/Anna-Mueller.jpg" alt="Anna Müller Bild">
+                        <div class="team-content">
+                            <h4>Anna Müller</h4>
+                            <p>Bauplanerin</p>
+                        </div>
+                        <p>
+                            Koordiniert alle Projekte und sorgt für reibungslose Abläufe und zufriedene Kunden.
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/Anna-Mueller.jpg" alt="Anna Müller Bild">
+                        <div class="team-content">
+                            <h4>Max Schmidt</h4>
+                            <p>Statiker</p>
+                        </div>
+                        <p>
+                            Koordiniert alle Projekte und sorgt für reibungslose Abläufe und zufriedene Kunden.
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/Anna-Mueller.jpg" alt="Anna Müller Bild">
+                        <div class="team-content">
+                            <h4>Lisa Mangold</h4>
+                            <p>Innendesignerin</p>
+                        </div>
+                        <p>
+                            Koordiniert alle Projekte und sorgt für reibungslose Abläufe und zufriedene Kunden.
+                        </p>
+                    </div>
 
+                </div>
+                <div class="swiper-button-next">
+                    <svg width="53" height="73" viewBox="0 0 38 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.3668 33.6605L17.1535 30.4829L28.3108 19.3257H0.283761V14.6843H28.3108L17.1535 3.54487L20.3668 0.349433L37.0223 17.005L20.3668 33.6605Z" fill="#1BB8D5"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="kontakt">
+        <div class="container-fluid">
+            <img src="assets/images/image_6.jpg" alt="Bild" class="bg-img">
+            <div class="container">
+                <div style="margin-bottom: 1.7rem;">
+                    <span class="tag white">Kontakt</span>
+                </div>
+                <h2 class="white">
+                    Ihr Traumhaus wartet
+                </h2>
+                <div class="kontakt-wrapper">
+                    <div class="kontakt-btn">
+                        <a href="mailto:info@schwenkbauplanung.de" class="tag contact">
+                            <span>
+                                info@schwenkbauplanung.de
+                            </span>
+                            <svg width="29" height="29" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="50" height="50" rx="8.62069" fill="white"/>
+                                <path d="M26.0976 36.4346L23.9835 34.3439L31.3242 27.0032L12.8843 27.0032V23.9495L31.3242 23.9495L23.9835 16.6205L26.0976 14.5181L37.0558 25.4763L26.0976 36.4346Z" fill="#1BB8D5"/>
+                            </svg></a>
+                    </div>
+                    <div class="kontakt-btn">
+                        <a href="tel:+4973338053141" class="tag contact">
+                            <span>
+                                +49 7333 8053141
+                            </span>
+                            <svg width="29" height="29" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="50" height="50" rx="8.62069" fill="white"/>
+                                <path d="M26.0976 36.4346L23.9835 34.3439L31.3242 27.0032L12.8843 27.0032V23.9495L31.3242 23.9495L23.9835 16.6205L26.0976 14.5181L37.0558 25.4763L26.0976 36.4346Z" fill="#1BB8D5"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
 
+            </div>
+        </div>
+    </section>
+
+    <section id="footer">
+        <footer>
+            <div class="container">
+                <div class="footer-top">
+                    <div class="col">
+                        <span><strong>Schwenk Bauplanung</strong></span>
+                        <span>Pichlerstraße 33</span>
+                        <span>89150 Laichingen</span><br/>
+                        <a href="https://www.google.com/maps/place/Schwenk+Bauplanung/@48.4938013,9.6772455,15z/data=!4m10!1m2!2m1!1sschwenk+laichingen!3m6!1s0x47999d5c470887cf:0xe72918bb021f64ef!8m2!3d48.4881177!4d9.6945046!15sChJzY2h3ZW5rIGxhaWNoaW5nZW6SARVyZWFsX2VzdGF0ZV9kZXZlbG9wZXKqATsQATIfEAEiG4NcOmSVAphW9LDXYfB8Aec08UXWCwbNcY-eRzIWEAIiEnNjaHdlbmsgbGFpY2hpbmdlbuABAA!16s%2Fg%2F11dz54f5bl?entry=ttu&g_ep=EgoyMDI1MDkwOC4wIKXMDSoASAFQAw%3D%3D"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Google Maps
+                        </a>
+                    </div>
+                    <div class="col">
+                        <span><strong>Kontakt</strong></span><br/>
+                        <div class="contact">
+                            <span>E-Mail</span>
+                            <a href="mailto:info@schwenkbauplanung.de">
+                                <span>
+                                    info@schwenkbauplanung.de
+                                </span>
+                            </a>
+                            <span>Telefon</span>
+                            <a href="tel:+4973338053141">
+                                <span>
+                                    +49 7333 8053141
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="index.html">
+                        <img src="assets/vectors/arrow-square-up.svg" alt="Zum Startseite scrollen" />
+                    </a>
+                </div>
+                <div class="footer-bottom">
+                    <img src="assets/vectors/logo-footer.svg" alt="Schwenk Bauplanung Logo"/>
+                    <div class="col">
+                        <div>
+                            <a href="impressum-datenschutz.html">Impressum</a>
+                            <span> & </span>
+                            <a href="impressum-datenschutz.html#datenschutz">Datenschutz</a>
+                        </div>
+                        <span>&copy; 2025 Schwenk Bauplanung</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </section>
 </main>
 

@@ -28,7 +28,12 @@
 }
 html {
   font-size: 20px;
-  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+@media (max-width: 820px) {
+  html {
+    font-size: 18px;
+  }
 }
 
 body {
@@ -45,12 +50,21 @@ h1 {
   color: #ffffff;
   font-weight: inherit;
 }
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
 
 h2 {
   font-family: "InterBold", sans-serif;
   font-size: 3rem;
   line-height: 123%;
   font-weight: inherit;
+  color: #000000;
+}
+h2.white {
+  color: #ffffff;
 }
 
 h3 {
@@ -69,6 +83,14 @@ h4 {
   margin: 0;
 }
 
+h5 {
+  font-family: "InterBold", sans-serif;
+  font-size: 1rem;
+  line-height: 140%;
+  font-weight: inherit;
+  margin: 0;
+}
+
 p {
   font-family: "InterRegular", sans-serif;
   font-size: 1rem;
@@ -79,10 +101,49 @@ p {
 
 .container {
   width: 100%;
-  max-width: 72rem;
+  max-width: 94%;
   margin: 0 auto;
   padding: 0 1rem;
   box-sizing: border-box;
+}
+
+.impressum-section {
+  position: relative;
+  height: 4rem;
+  margin: 0 calc((100vw - 93%) / 2);
+}
+.impressum-section nav {
+  width: 28rem;
+}
+.impressum-section nav ul {
+  justify-content: end;
+}
+
+.impressum-container {
+  max-width: 30rem;
+  margin: 6rem calc((100vw - 93%) / 2) 9rem calc((100vw - 93%) / 2);
+}
+.impressum-container li::marker {
+  color: #1BB8D5;
+}
+.impressum-container .bold {
+  margin-bottom: 2rem;
+}
+.impressum-container .contact {
+  display: grid;
+  grid-template-columns: auto 2fr;
+  grid-column-gap: 1rem;
+  width: max-content;
+}
+.impressum-container .contact a {
+  color: #000000;
+}
+
+.tag-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 0.5rem;
+  justify-content: start;
 }
 
 .tag {
@@ -96,14 +157,43 @@ p {
   width: max-content;
   text-transform: uppercase;
 }
+.tag.gray {
+  background-color: #EBEBEB;
+  color: #000000;
+}
+.tag.white {
+  background-color: #ffffff;
+  color: #000000;
+}
+.tag.contact {
+  background-color: transparent;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0;
+  margin-right: 0.5rem;
+  font-size: 0.75rem;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  grid-gap: 0.5rem;
+}
 
 .lead {
   font-family: "InterBold", sans-serif;
   font-size: 1.2rem;
 }
 
-.nav-link {
+li a {
   color: #000000;
+  transition-duration: 0.3s;
+}
+li a:hover {
+  color: red;
+}
+li a > :last-child {
+  color: #000000;
+}
+li .nav-link {
   font-family: "SpaceGrotesk", sans-serif;
   font-size: 0.75rem;
   line-height: 1;
@@ -130,15 +220,15 @@ nav ul {
   padding: 0;
 }
 nav ul li {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
 }
 nav ul li:first-of-type {
   margin-left: 0;
-  margin-right: 1.5rem;
+  margin-right: 0.75rem;
 }
 nav ul li:last-of-type {
-  margin-left: 1.5rem;
+  margin-left: 0.75rem;
   margin-right: 0;
 }
 nav ul li a {
@@ -182,6 +272,11 @@ nav ul li .tag {
   grid-column: span 4;
   margin-right: 1rem;
 }
+@media (max-width: 1024px) {
+  .ansprechpartner div {
+    grid-column: span 6;
+  }
+}
 
 .ablauf-nav {
   margin-top: 6rem;
@@ -192,6 +287,11 @@ nav ul li .tag {
   text-decoration: none;
   color: #000000;
   display: grid;
+}
+@media (max-width: 1024px) {
+  .ablauf-nav a {
+    justify-items: center;
+  }
 }
 .ablauf-nav a span {
   margin-top: 0.725rem;
@@ -205,11 +305,16 @@ nav ul li .tag {
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 1rem;
 }
+@media (max-width: 1024px) {
+  #baupartner .container .img-text {
+    grid-template-columns: 1fr;
+  }
+}
 #baupartner .container .img-text:first-child {
   grid-column: span 2;
 }
 #baupartner .container .img-text h3 {
-  grid-column: span 4;
+  grid-column: span 5;
 }
 #baupartner .container .grid-img {
   margin-top: 9rem;
@@ -219,18 +324,41 @@ nav ul li .tag {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(4, 1fr);
   grid-gap: 1rem;
+  margin-bottom: 9rem;
+}
+@media (max-width: 1024px) {
+  #baupartner .container .grid-img-2 {
+    grid-template-rows: repeat(2, 1fr);
+  }
 }
 #baupartner .container .grid-img-2 .img-1 {
   grid-area: 2/1/6/3;
+  object-fit: cover;
+}
+@media (max-width: 1024px) {
+  #baupartner .container .grid-img-2 .img-1 {
+    grid-area: 2/6/4/6;
+  }
 }
 #baupartner .container .grid-img-2 .img-2 {
   grid-area: 1/3/4/7;
-  margin-bottom: 9rem;
+  object-fit: cover;
+}
+@media (max-width: 1024px) {
+  #baupartner .container .grid-img-2 .img-2 {
+    grid-area: 1/3/1/1;
+  }
 }
 #baupartner .container .card-wrapper {
   display: grid;
-  grid-auto-flow: column;
   grid-gap: 1rem;
+  grid-template-columns: 2fr 2fr 2fr;
+}
+@media (max-width: 1024px) {
+  #baupartner .container .card-wrapper {
+    grid-template-columns: 1fr;
+    grid-gap: 3rem;
+  }
 }
 #baupartner .container .card-wrapper .card h4 {
   margin-top: 1.5rem;
@@ -253,43 +381,218 @@ nav ul li .tag {
   color: #1BB8D5;
 }
 
-#dienstleistungen .swiper {
+#dienstleistungen .swiper-dienstleistungen, #dienstleistungen .swiper-projekte, #dienstleistungen .swiper-team, #projekte .swiper-dienstleistungen, #projekte .swiper-projekte, #projekte .swiper-team, #team .swiper-dienstleistungen, #team .swiper-projekte, #team .swiper-team {
   width: 100%;
   margin-bottom: 9rem;
+  position: relative;
 }
-#dienstleistungen .swiper .swiper-wrapper {
-  padding-left: calc((100vw - 72rem) / 2);
+#dienstleistungen .swiper-dienstleistungen .swiper-wrapper, #dienstleistungen .swiper-projekte .swiper-wrapper, #dienstleistungen .swiper-team .swiper-wrapper, #projekte .swiper-dienstleistungen .swiper-wrapper, #projekte .swiper-projekte .swiper-wrapper, #projekte .swiper-team .swiper-wrapper, #team .swiper-dienstleistungen .swiper-wrapper, #team .swiper-projekte .swiper-wrapper, #team .swiper-team .swiper-wrapper {
+  padding-left: calc((100vw - 93% + 0.25rem) / 2);
   box-sizing: border-box;
 }
-#dienstleistungen .swiper .swiper-wrapper .swiper-slide {
+#dienstleistungen .swiper-dienstleistungen .swiper-wrapper .swiper-slide, #dienstleistungen .swiper-projekte .swiper-wrapper .swiper-slide, #dienstleistungen .swiper-team .swiper-wrapper .swiper-slide, #projekte .swiper-dienstleistungen .swiper-wrapper .swiper-slide, #projekte .swiper-projekte .swiper-wrapper .swiper-slide, #projekte .swiper-team .swiper-wrapper .swiper-slide, #team .swiper-dienstleistungen .swiper-wrapper .swiper-slide, #team .swiper-projekte .swiper-wrapper .swiper-slide, #team .swiper-team .swiper-wrapper .swiper-slide {
+  width: min-content;
   text-align: left;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-#dienstleistungen .swiper .swiper-wrapper .swiper-slide img {
-  width: 100%;
+#dienstleistungen .swiper-dienstleistungen .swiper-wrapper .swiper-slide p, #dienstleistungen .swiper-projekte .swiper-wrapper .swiper-slide p, #dienstleistungen .swiper-team .swiper-wrapper .swiper-slide p, #projekte .swiper-dienstleistungen .swiper-wrapper .swiper-slide p, #projekte .swiper-projekte .swiper-wrapper .swiper-slide p, #projekte .swiper-team .swiper-wrapper .swiper-slide p, #team .swiper-dienstleistungen .swiper-wrapper .swiper-slide p, #team .swiper-projekte .swiper-wrapper .swiper-slide p, #team .swiper-team .swiper-wrapper .swiper-slide p {
+  width: fit-content;
+  max-width: 21rem;
+  text-wrap: pretty;
+}
+#dienstleistungen .swiper-dienstleistungen .swiper-wrapper .swiper-slide .projekte-content, #dienstleistungen .swiper-projekte .swiper-wrapper .swiper-slide .projekte-content, #dienstleistungen .swiper-team .swiper-wrapper .swiper-slide .projekte-content, #projekte .swiper-dienstleistungen .swiper-wrapper .swiper-slide .projekte-content, #projekte .swiper-projekte .swiper-wrapper .swiper-slide .projekte-content, #projekte .swiper-team .swiper-wrapper .swiper-slide .projekte-content, #team .swiper-dienstleistungen .swiper-wrapper .swiper-slide .projekte-content, #team .swiper-projekte .swiper-wrapper .swiper-slide .projekte-content, #team .swiper-team .swiper-wrapper .swiper-slide .projekte-content {
+  display: grid;
+  height: fit-content;
+  min-height: 11rem;
+  align-content: space-between;
+}
+#dienstleistungen .swiper-dienstleistungen .swiper-wrapper .swiper-slide .team-content p, #dienstleistungen .swiper-projekte .swiper-wrapper .swiper-slide .team-content p, #dienstleistungen .swiper-team .swiper-wrapper .swiper-slide .team-content p, #projekte .swiper-dienstleistungen .swiper-wrapper .swiper-slide .team-content p, #projekte .swiper-projekte .swiper-wrapper .swiper-slide .team-content p, #projekte .swiper-team .swiper-wrapper .swiper-slide .team-content p, #team .swiper-dienstleistungen .swiper-wrapper .swiper-slide .team-content p, #team .swiper-projekte .swiper-wrapper .swiper-slide .team-content p, #team .swiper-team .swiper-wrapper .swiper-slide .team-content p {
+  margin-top: 0.25em;
+}
+#dienstleistungen .swiper-dienstleistungen .swiper-wrapper .swiper-slide img, #dienstleistungen .swiper-projekte .swiper-wrapper .swiper-slide img, #dienstleistungen .swiper-team .swiper-wrapper .swiper-slide img, #projekte .swiper-dienstleistungen .swiper-wrapper .swiper-slide img, #projekte .swiper-projekte .swiper-wrapper .swiper-slide img, #projekte .swiper-team .swiper-wrapper .swiper-slide img, #team .swiper-dienstleistungen .swiper-wrapper .swiper-slide img, #team .swiper-projekte .swiper-wrapper .swiper-slide img, #team .swiper-team .swiper-wrapper .swiper-slide img {
+  display: block;
+  width: max-content;
   height: 32.3rem;
   object-fit: cover;
 }
-#dienstleistungen .swiper .swiper-scrollbar {
+#dienstleistungen .swiper-dienstleistungen .swiper-scrollbar, #dienstleistungen .swiper-projekte .swiper-scrollbar, #dienstleistungen .swiper-team .swiper-scrollbar, #projekte .swiper-dienstleistungen .swiper-scrollbar, #projekte .swiper-projekte .swiper-scrollbar, #projekte .swiper-team .swiper-scrollbar, #team .swiper-dienstleistungen .swiper-scrollbar, #team .swiper-projekte .swiper-scrollbar, #team .swiper-team .swiper-scrollbar {
   width: 15rem;
-  margin-left: calc((100vw - 72rem) / 2);
   position: relative;
   top: 0;
   left: 0;
   background: #EBEBEB;
   margin-bottom: 1.5rem;
 }
-#dienstleistungen .swiper .swiper-scrollbar .swiper-scrollbar-drag {
+#dienstleistungen .swiper-dienstleistungen .swiper-scrollbar .swiper-scrollbar-drag, #dienstleistungen .swiper-projekte .swiper-scrollbar .swiper-scrollbar-drag, #dienstleistungen .swiper-team .swiper-scrollbar .swiper-scrollbar-drag, #projekte .swiper-dienstleistungen .swiper-scrollbar .swiper-scrollbar-drag, #projekte .swiper-projekte .swiper-scrollbar .swiper-scrollbar-drag, #projekte .swiper-team .swiper-scrollbar .swiper-scrollbar-drag, #team .swiper-dienstleistungen .swiper-scrollbar .swiper-scrollbar-drag, #team .swiper-projekte .swiper-scrollbar .swiper-scrollbar-drag, #team .swiper-team .swiper-scrollbar .swiper-scrollbar-drag {
   background: #1BB8D5;
   border-radius: 0;
 }
-#dienstleistungen h4 {
+#dienstleistungen .swiper-dienstleistungen .swiper-button-next:after, #dienstleistungen .swiper-dienstleistungen .swiper-rtl .swiper-button-prev:after, #dienstleistungen .swiper-projekte .swiper-button-next:after, #dienstleistungen .swiper-projekte .swiper-rtl .swiper-button-prev:after, #dienstleistungen .swiper-team .swiper-button-next:after, #dienstleistungen .swiper-team .swiper-rtl .swiper-button-prev:after, #projekte .swiper-dienstleistungen .swiper-button-next:after, #projekte .swiper-dienstleistungen .swiper-rtl .swiper-button-prev:after, #projekte .swiper-projekte .swiper-button-next:after, #projekte .swiper-projekte .swiper-rtl .swiper-button-prev:after, #projekte .swiper-team .swiper-button-next:after, #projekte .swiper-team .swiper-rtl .swiper-button-prev:after, #team .swiper-dienstleistungen .swiper-button-next:after, #team .swiper-dienstleistungen .swiper-rtl .swiper-button-prev:after, #team .swiper-projekte .swiper-button-next:after, #team .swiper-projekte .swiper-rtl .swiper-button-prev:after, #team .swiper-team .swiper-button-next:after, #team .swiper-team .swiper-rtl .swiper-button-prev:after {
+  content: "";
+}
+#dienstleistungen .swiper-dienstleistungen .swiper-button-next, #dienstleistungen .swiper-projekte .swiper-button-next, #dienstleistungen .swiper-team .swiper-button-next, #projekte .swiper-dienstleistungen .swiper-button-next, #projekte .swiper-projekte .swiper-button-next, #projekte .swiper-team .swiper-button-next, #team .swiper-dienstleistungen .swiper-button-next, #team .swiper-projekte .swiper-button-next, #team .swiper-team .swiper-button-next {
+  right: var(--swiper-navigation-sides-offset, 1rem);
+  top: var(--swiper-navigation-top-offset, 42%);
+}
+#dienstleistungen h4, #projekte h4, #team h4 {
   margin-top: 1.5rem;
 }
-#dienstleistungen p {
+#dienstleistungen p, #projekte p, #team p {
   margin-top: 0.5rem;
+}
+
+#impressions {
+  margin-bottom: 9rem;
+}
+#impressions .container {
+  /* Dynamic bullets pagination */
+}
+#impressions .container .swiper-impressions {
+  overflow: hidden;
+  position: relative;
+}
+#impressions .container .swiper-impressions .swiper-wrapper .swiper-slide {
+  margin-top: 2.5rem;
+}
+#impressions .container .swiper-impressions .swiper-wrapper .swiper-slide .quote {
+  width: fit-content;
+  max-width: 40rem;
+}
+#impressions .container .swiper-impressions .swiper-wrapper .swiper-slide .quote .author {
+  margin-top: 1.5rem;
+}
+#impressions .container .swiper-pagination {
+  height: fit-content;
+  text-align: start;
+}
+#impressions .container .swiper-pagination-bullets {
+  top: 0;
+  left: 0;
+}
+#impressions .container .swiper-pagination-bullet {
+  width: 4rem;
+  height: 0.25rem;
+  border-radius: 0;
+  margin: 0 4px !important;
+  background: #EBEBEB;
+  opacity: 1;
+  transition: all 0.3s;
+}
+#impressions .container .swiper-pagination-bullet-active {
+  background: #1BB8D5;
+}
+#impressions .container .pagination-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+}
+#impressions .container .buttons-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 1.5rem;
+  height: 2.5rem;
+  justify-content: end;
+}
+#impressions .container .swiper-button-prev, #impressions .container .swiper-button-next {
+  position: relative !important;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+#impressions .container .swiper-button-prev:after, #impressions .container .swiper-button-next:after {
+  content: "";
+}
+
+#kontakt {
+  margin-bottom: 6rem;
+}
+#kontakt .container-fluid {
+  position: relative;
+}
+#kontakt .container-fluid .bg-img {
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+}
+#kontakt .container-fluid .container {
+  margin-left: calc((100vw - 93% + 12rem) / 2);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  width: max-content;
+}
+#kontakt .container-fluid .container .kontakt-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 1rem;
+  width: max-content;
+}
+#kontakt .container-fluid .container .kontakt-wrapper .kontakt-btn {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: #1BB8D5;
+}
+#kontakt .container-fluid .container .kontakt-wrapper .kontakt-btn a {
+  margin-left: 0.5rem;
+}
+#kontakt .container-fluid .container h2 {
+  margin: 0 0 2rem 0;
+}
+
+#footer footer {
+  font-size: 0.9rem;
+}
+#footer footer .footer-top {
+  display: grid;
+  grid-auto-flow: column;
+  margin-bottom: 10rem;
+}
+#footer footer .footer-top > :last-child {
+  justify-self: end;
+}
+#footer footer .footer-top .col {
+  display: grid;
+}
+#footer footer .footer-top .col a {
+  color: #000000;
+  transition-duration: 0.3s;
+}
+#footer footer .footer-top .col a:hover {
+  color: red;
+}
+#footer footer .footer-top .contact {
+  display: grid;
+  grid-template-columns: auto 2fr;
+  grid-column-gap: 1rem;
+  width: max-content;
+}
+#footer footer .footer-bottom {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: end;
+  margin-bottom: 1rem;
+}
+@media (max-width: 1024px) {
+  #footer footer .footer-bottom img {
+    max-width: 15rem;
+  }
+}
+#footer footer .footer-bottom .col {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 3rem;
+  justify-content: end;
+}
+#footer footer .footer-bottom .col a {
+  color: #000000;
+  transition-duration: 0.3s;
+}
+#footer footer .footer-bottom .col a:hover {
+  color: red;
 }
 
 /*# sourceMappingURL=style.css.map */
