@@ -9,22 +9,36 @@
 </head>
 <body>
 <section id="hero">
-    <div class="container">
         <header>
-            <nav>
-                <a href="#"><img src="assets/vectors/logo.svg" alt="Logo Schwenk Bauplan"/></a>
+            <nav class="nav">
+                <a href="index.html"><img src="assets/vectors/logo.svg" alt="Logo Schwenk Bauplan"/></a>
                 <ul>
-                    <li><a href="#baupartner" class="nav-link">Baupartner</a></li>
+                    <li><a href="#ansprechpartner" class="nav-link">Baupartner</a></li>
                     <li><a href="#dienstleistungen" class="nav-link">Leistungen</a></li>
                     <li><a href="#projekte" class="nav-link">Projekte</a></li>
                     <li><a href="#team" class="nav-link">Team</a></li>
                     <li><a href="#kontakt" class="tag nav-link">Kontakt</a></li>
                 </ul>
             </nav>
-    </header>
-        <h1 class="hero-text">Ihr Partner für Neubau<br/>und Modernisierung</h1>
+            <nav class="mobile-nav">
+                <a href="index.html"><img src="assets/vectors/logo.svg" alt="Logo Schwenk Bauplan"/></a>
+                <a href="javascript:void(0);" onclick="openMenu()">
+                    <img src="assets/vectors/menu.svg" alt="Menu Button" />
+                </a>
+                <div id="navMobile">
+                    <ul>
+                        <li><a href="#ansprechpartner" class="nav-link">Baupartner</a></li>
+                        <li><a href="#dienstleistungen" class="nav-link">Leistungen</a></li>
+                        <li><a href="#projekte" class="nav-link">Projekte</a></li>
+                        <li><a href="#team" class="nav-link">Team</a></li>
+                        <li><a href="#kontakt" class="tag nav-link">Kontakt</a></li>
+                    </ul>
+                </div>
+
+            </nav>
+        </header>
+        <h1 class="hero-text">Ihr Partner für Neubau und Modernisierung</h1>
         <img src="assets/vectors/hero-mood.svg" class="hero-mood" alt="Hero Vektor"/>
-    </div>
 </section>
 <main>
     <div class="container">
@@ -64,7 +78,7 @@
         </div>
     </div>
 
-    <section id="baupartner">
+    <section id="ansprechpartner">
         <div class="container">
             <div class="img-text">
                 <img src="assets/images/Oliver-Schwenk.jpg" alt="Oliver Schwenk" />
@@ -72,13 +86,56 @@
                     Oliver Schwenk ist Ihr kompetenter Ansprechpartner für die Planung Ihres Neubaus oder Umbaus. Ein Baupartner mit über 17 Jahren Erfahrung. 2001 als Maurer & staatlich geprüften Bautechniker. Ab 2011 realisierte er schlüsselfertige Einfamilienhäuser bei einem renommierten Bauunternehmen in Ulm. Seit 2014 im Bereich Gewerbebau tätig.
                 </h3>
             </div>
-            <img src="assets/images/image_11.jpg" class="grid-img" alt="Image 11" />
+            <div class="grid-img">
+                <img src="assets/images/image_11.jpg" alt="Image 11" />
+            </div>
         </div>
+    </section>
+    <section id="loop">
+        <div class="stage">
+            <div class="marquee" id="marquee" aria-label="Infinite marquee of items">
+                <div class="track" id="track">
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="assets/images/loop-img.jpg" alt="Loop Bild"/>
+                        </div>
+                        <div class="meta">
+                            <div class="title">
+                                Ihr Traumhaus
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="assets/images/loop-img.jpg" alt="Loop Bild"/>
+                        </div>
+                        <div class="meta">
+                            <div class="title">
+                                Bauen leicht gemacht
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="thumb">
+                            <img src="assets/images/loop-img.jpg" alt="Loop Bild"/>
+                        </div>
+                        <div class="meta">
+                            <div class="title">
+                                Zuverlässig
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="baupartner">
 
         <div class="container">
             <div class="grid-img-2">
-                <img src="assets/images/image_14.jpg" class="img-1" alt="Image 14"/>
-                <img src="assets/images/image_13.jpg" class="img-2" alt="Image 13"/>
+                <img src="assets/images/image_14.jpg" alt="Image 14"/>
+                <img src="assets/images/image_13.jpg" alt="Image 13"/>
             </div>
 
             <div class="card-wrapper">
@@ -131,6 +188,7 @@
         </div>
 
     </section>
+
     <section id="dienstleistungen">
         <div class="container">
             <div style="margin-bottom: 1.7rem;">
@@ -407,7 +465,46 @@
                             Koordiniert alle Projekte und sorgt für reibungslose Abläufe und zufriedene Kunden.
                         </p>
                     </div>
-
+                    <div class="swiper-slide">
+                        <img src="assets/images/Oliver-Schwenk.jpg" alt="Oliver Schwenk Bild" style="max-width: 20.75rem">
+                        <div class="team-content">
+                            <h4>Oliver Schwenk</h4>
+                            <p>Geschäftsführer</p>
+                        </div>
+                        <p>
+                            Leitet das Unternehmen mit Leidenschaft und Expertise. Ist seit 17 Jahren in diesem Bereich tätig.
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/Anna-Mueller.jpg" alt="Anna Müller Bild">
+                        <div class="team-content">
+                            <h4>Anna Müller</h4>
+                            <p>Bauplanerin</p>
+                        </div>
+                        <p>
+                            Koordiniert alle Projekte und sorgt für reibungslose Abläufe und zufriedene Kunden.
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/Anna-Mueller.jpg" alt="Anna Müller Bild">
+                        <div class="team-content">
+                            <h4>Max Schmidt</h4>
+                            <p>Statiker</p>
+                        </div>
+                        <p>
+                            Koordiniert alle Projekte und sorgt für reibungslose Abläufe und zufriedene Kunden.
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/images/Anna-Mueller.jpg" alt="Anna Müller Bild">
+                        <div class="team-content">
+                            <h4>Lisa Mangold</h4>
+                            <p>Innendesignerin</p>
+                        </div>
+                        <p>
+                            Koordiniert alle Projekte und sorgt für reibungslose Abläufe und zufriedene Kunden.
+                        </p>
+                    </div>
                 </div>
                 <div class="swiper-button-next">
                     <svg width="53" height="73" viewBox="0 0 38 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -487,7 +584,7 @@
                             </a>
                         </div>
                     </div>
-                    <a href="index.html">
+                    <a href="#hero">
                         <img src="assets/vectors/arrow-square-up.svg" alt="Zum Startseite scrollen" />
                     </a>
                 </div>
@@ -506,7 +603,7 @@
         </footer>
     </section>
 </main>
-
+<script src="js/gsap.js"></script>
 <script src="js/swiper.js"></script>
 <script src="js/main.js"></script>
 </body>
