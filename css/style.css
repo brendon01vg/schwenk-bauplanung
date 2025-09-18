@@ -32,7 +32,9 @@
 
 html {
   font-size: 20px;
-  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 @media (max-width: 1200px) {
   html {
@@ -144,6 +146,11 @@ p {
   padding: 0 1rem;
   box-sizing: border-box;
 }
+@media (max-width: 500px) {
+  .container {
+    padding: 0;
+  }
+}
 
 .impressum-section {
   position: relative;
@@ -244,7 +251,6 @@ li .nav-link {
 nav {
   z-index: 1000;
   position: fixed;
-  background-color: rgba(235, 235, 235, 0.66);
   padding: 0.5rem 1rem;
   display: grid;
   border-radius: 5px;
@@ -280,6 +286,7 @@ nav ul li .tag {
   grid-gap: 3rem;
   grid-auto-flow: column;
   margin: 1rem calc((100vw - 94%) / 2 + 0.6rem) 0 calc((100vw - 94%) / 2 + 0.6rem);
+  background-color: rgba(235, 235, 235, 0.66);
 }
 @media (max-width: 1024px) {
   .nav {
@@ -294,9 +301,11 @@ nav ul li .tag {
   display: none;
   grid-template-columns: 1fr 1fr;
   max-width: 100vw;
-  width: calc(100vw - 2rem);
-  margin: 1rem 1rem 0 1rem;
+  width: calc(100vw - 1.6rem);
+  margin: 1rem 0.8rem;
   justify-content: space-between;
+  background-color: rgba(235, 235, 235, 0.66);
+  transition: background-color 0.3s ease-out;
 }
 .mobile-nav > :nth-child(2) {
   justify-self: end;
@@ -307,11 +316,19 @@ nav ul li .tag {
   }
 }
 .mobile-nav #navMobile {
-  display: none;
   max-height: 0;
-  overflow: hidden;
   opacity: 0;
+  overflow: hidden;
   transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+.mobile-nav #menuToggle:checked + .menu-icon + #navMobile {
+  max-height: 500px; /* adjust to menu height */
+  opacity: 1;
+}
+.mobile-nav .menu-icon {
+  display: inline-block;
+  cursor: pointer;
+  justify-self: end;
 }
 .mobile-nav #navMobile.show {
   display: block;
@@ -337,6 +354,11 @@ nav ul li .tag {
   background-position: center;
   background-repeat: no-repeat;
 }
+@media (min-width: 1024px) {
+  #hero {
+    height: calc(var(--vh, 1vh) * 100);
+  }
+}
 #hero .hero-mood {
   position: absolute;
   bottom: 0;
@@ -347,18 +369,13 @@ nav ul li .tag {
   position: absolute;
   bottom: 0;
   z-index: 2;
-  margin: 0 calc((100vw - 94%) / 2 + 0.6rem);
-  padding-bottom: 1rem;
   width: 100%;
+  padding: 1rem 0.8rem 2rem 0.8rem;
 }
-@media (min-width: 1920px) {
+@media (min-width: 870px) {
   #hero .hero-text {
-    width: 50%;
-  }
-}
-@media (min-width: 1070px) {
-  #hero .hero-text {
-    width: 50%;
+    width: 75%;
+    padding: 1rem calc((100vw - 94%) / 2 + 0.6rem) 0 calc((100vw - 94%) / 2 + 0.6rem);
   }
 }
 
@@ -519,7 +536,7 @@ nav ul li .tag {
 @media (max-width: 1024px) {
   #baupartner .container .card-wrapper {
     grid-template-columns: 1fr;
-    grid-gap: 3rem;
+    grid-gap: 4rem;
   }
 }
 #baupartner .container .card-wrapper .card img {
@@ -565,6 +582,11 @@ nav ul li .tag {
 #dienstleistungen .swiper-dienstleistungen .swiper-wrapper, #dienstleistungen .swiper-projekte .swiper-wrapper, #dienstleistungen .swiper-team .swiper-wrapper, #projekte .swiper-dienstleistungen .swiper-wrapper, #projekte .swiper-projekte .swiper-wrapper, #projekte .swiper-team .swiper-wrapper, #team .swiper-dienstleistungen .swiper-wrapper, #team .swiper-projekte .swiper-wrapper, #team .swiper-team .swiper-wrapper {
   padding-left: calc((100vw - 94%) / 2 + 0.6rem);
   box-sizing: border-box;
+}
+@media (max-width: 500px) {
+  #dienstleistungen .swiper-dienstleistungen .swiper-wrapper, #dienstleistungen .swiper-projekte .swiper-wrapper, #dienstleistungen .swiper-team .swiper-wrapper, #projekte .swiper-dienstleistungen .swiper-wrapper, #projekte .swiper-projekte .swiper-wrapper, #projekte .swiper-team .swiper-wrapper, #team .swiper-dienstleistungen .swiper-wrapper, #team .swiper-projekte .swiper-wrapper, #team .swiper-team .swiper-wrapper {
+    padding-left: calc((100vw - 94%) / 2);
+  }
 }
 #dienstleistungen .swiper-dienstleistungen .swiper-wrapper .swiper-slide, #dienstleistungen .swiper-projekte .swiper-wrapper .swiper-slide, #dienstleistungen .swiper-team .swiper-wrapper .swiper-slide, #projekte .swiper-dienstleistungen .swiper-wrapper .swiper-slide, #projekte .swiper-projekte .swiper-wrapper .swiper-slide, #projekte .swiper-team .swiper-wrapper .swiper-slide, #team .swiper-dienstleistungen .swiper-wrapper .swiper-slide, #team .swiper-projekte .swiper-wrapper .swiper-slide, #team .swiper-team .swiper-wrapper .swiper-slide {
   width: min-content;

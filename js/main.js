@@ -1,28 +1,25 @@
-function openMenu() {
-    var x = document.getElementById("navMobile");
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.querySelectorAll('#navMobile .nav-link');
 
-    // If already visible
-    if (x.style.display === "block") {
-        // Start transition out
-        x.style.opacity = 0;
-        x.style.maxHeight = "0";
+navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default anchor jump
+        const targetId = this.getAttribute('href').slice(1); // Remove #
+        const targetEl = document.getElementById(targetId);
 
-        // Wait for transition to finish before hiding completely
-        setTimeout(function() {
-            x.style.display = "none";
-        }, 300); // 300ms = transition duration
-    } else {
-        // Show immediately for transition in
-        x.style.display = "block";
-        setTimeout(function() { // Timeout ensures transition works
-            x.style.opacity = 1;
-            x.style.maxHeight = "500px"; // Adjust to menu height
-        }, 10);
-    }
+        if (targetEl) {
+            // Scroll smoothly 100px above the target
+            window.scrollTo({
+                top: targetEl.offsetTop - 100,
+                behavior: 'smooth'
+            });
+        }
 
-    // Optional: you can still toggle class for CSS-only handling
-    x.classList.toggle("show");
-}
+        // Close the menu
+        menuToggle.checked = false;
+    });
+});
+
 
 const swiperDienstleistungen = new Swiper(".swiper-dienstleistungen", {
     slidesPerView: 'auto', // default (mobile)
