@@ -123,6 +123,9 @@ const swiperImpressions = new Swiper(".swiper-impressions", {
     // duplicate items so the loop has something to wrap into
     track.innerHTML += track.innerHTML;
 
+    track.addEventListener('touchstart', () => window._marqueeTween?.pause());
+    track.addEventListener('touchend', () => window._marqueeTween?.play());
+
     let speed = 120; // px per second
 
     function makeAnimation(){
@@ -150,6 +153,10 @@ const swiperImpressions = new Swiper(".swiper-impressions", {
     });
 
     makeAnimation();
+
+    window.addEventListener('orientationchange', () => {
+        makeAnimation();
+    });
 
     // pause animation if tab is hidden
     document.addEventListener('visibilitychange', () => {

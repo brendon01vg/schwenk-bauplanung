@@ -32,6 +32,7 @@
 
 html {
   font-size: 20px;
+  scroll-behavior: smooth;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -650,10 +651,14 @@ nav ul li .tag {
 }
 #loop .stage .marquee .track {
   display: flex;
+  will-change: transform;
   align-items: center;
   white-space: nowrap;
   flex-wrap: nowrap;
   gap: 2rem;
+}
+#loop .stage .marquee .track > * {
+  display: inline-block;
 }
 #loop .stage .marquee .track .item {
   display: inline-flex;
@@ -698,6 +703,11 @@ nav ul li .tag {
 }
 #impressions .container .swiper-impressions .swiper-wrapper .swiper-slide {
   margin-top: 2.5rem;
+}
+@media (max-width: 500px) {
+  #impressions .container .swiper-impressions .swiper-wrapper .swiper-slide {
+    margin-top: 5rem;
+  }
 }
 #impressions .container .swiper-impressions .swiper-wrapper .swiper-slide .quote {
   width: fit-content;
@@ -745,9 +755,22 @@ nav ul li .tag {
 #impressions .container .swiper-button-prev:after, #impressions .container .swiper-button-next:after {
   content: "";
 }
+@media (max-width: 500px) {
+  #impressions .container .swiper-button-prev, #impressions .container .swiper-button-next {
+    top: 150%;
+  }
+}
+#impressions .container .swiper-button-next {
+  right: 0;
+}
 
 #kontakt {
   margin-bottom: 6rem;
+}
+@media (max-width: 820px) {
+  #kontakt {
+    margin-bottom: 3rem;
+  }
 }
 #kontakt .container-fluid {
   position: relative;
@@ -829,6 +852,13 @@ nav ul li .tag {
     grid-template-columns: 1fr;
     grid-gap: 3rem;
   }
+}
+@media (max-width: 650px) and (max-width: 500px) {
+  #footer footer .footer-top {
+    margin-bottom: 3rem;
+  }
+}
+@media (max-width: 650px) {
   #footer footer .footer-top > :last-child {
     grid-row: 1;
     grid-column: 1;
@@ -873,8 +903,14 @@ nav ul li .tag {
 #footer footer .footer-bottom .col {
   display: grid;
   grid-auto-flow: column;
-  grid-gap: 3rem;
+  grid-gap: 0.5rem;
   justify-content: end;
+  font-size: 0.6rem;
+}
+@media (max-width: 500px) {
+  #footer footer .footer-bottom .col {
+    justify-content: space-between;
+  }
 }
 #footer footer .footer-bottom .col a {
   color: #000000;
