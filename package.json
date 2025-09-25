@@ -1,0 +1,27 @@
+{
+  "name": "schwenk-bauplanung",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass scss/style.scss css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brendon01vg/schwenk-bauplanung.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/brendon01vg/schwenk-bauplanung/issues"
+  },
+  "homepage": "https://github.com/brendon01vg/schwenk-bauplanung#readme",
+  "dependencies": {
+    "gsap": "^3.13.0",
+    "sass": "^1.91.0",
+    "swiper": "^11.2.10"
+  }
+}

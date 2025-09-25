@@ -20,19 +20,9 @@ navLinks.forEach(link => {
     });
 });
 
-
 const swiperDienstleistungen = new Swiper(".swiper-dienstleistungen", {
     slidesPerView: 'auto', // default (mobile)
     spaceBetween: 20,
-    slidesOffsetAfter: (window.innerWidth - 72 * 20) / 2,
-    breakpoints: {
-        640: {
-            slidesOffsetAfter: (window.innerWidth - 40 * 20) / 2,
-        },
-        1024: {
-            slidesOffsetAfter: (window.innerWidth - 72 * 20) / 2,
-        },
-    },
     scrollbar: {
         el: '.swiper-scrollbar',
         // Makes the Scrollbar Draggable
@@ -42,7 +32,7 @@ const swiperDienstleistungen = new Swiper(".swiper-dienstleistungen", {
         // Size (Length) of Scrollbar Draggable Element in px
         dragSize: 'auto',
     },
-
+    slidesOffsetAfter: 40,
     navigation: {
         nextEl: '.swiper-button-next',
     },
@@ -51,25 +41,17 @@ const swiperDienstleistungen = new Swiper(".swiper-dienstleistungen", {
 const swiperProjekte = new Swiper(".swiper-projekte", {
     slidesPerView: 'auto', // default (mobile)
     spaceBetween: 20,
-    slidesOffsetAfter: (window.innerWidth - 72 * 20) / 2,
-    breakpoints: {
-        640: {
-            slidesOffsetAfter: (window.innerWidth - 40 * 20) / 2, // example smaller container
-        },
-        1024: {
-            slidesOffsetAfter: (window.innerWidth - 72 * 20) / 2,
-        },
-    },
+    freeMode: true,
     scrollbar: {
         el: '.swiper-scrollbar',
         // Makes the Scrollbar Draggable
         draggable: true,
         // Snaps slider position to slides when you release Scrollbar
-        snapOnRelease: true,
+        snapOnRelease: false,
         // Size (Length) of Scrollbar Draggable Element in px
         dragSize: 'auto',
     },
-
+    slidesOffsetAfter: 40,
     navigation: {
         nextEl: '.swiper-button-next',
     },
@@ -78,15 +60,6 @@ const swiperProjekte = new Swiper(".swiper-projekte", {
 const swiperTeam = new Swiper(".swiper-team", {
     slidesPerView: 'auto', // default (mobile)
     spaceBetween: 20,
-    slidesOffsetAfter: (window.innerWidth - 72 * 20) / 2,
-    breakpoints: {
-        640: {
-            slidesOffsetAfter: (window.innerWidth - 40 * 20) / 2, // example smaller container
-        },
-        1024: {
-            slidesOffsetAfter: (window.innerWidth - 72 * 20) / 2,
-        },
-    },
     scrollbar: {
         el: '.swiper-scrollbar',
         // Makes the Scrollbar Draggable
@@ -97,6 +70,12 @@ const swiperTeam = new Swiper(".swiper-team", {
         dragSize: 'auto',
     },
 
+    // breakpoints: {
+    //     0: {
+    //         slidesOffsetAfter: 40,
+    //     },
+    // },
+    slidesOffsetAfter: 40,
     navigation: {
         nextEl: '.swiper-button-next',
     },
@@ -150,6 +129,10 @@ const swiperImpressions = new Swiper(".swiper-impressions", {
     });
 
     makeAnimation();
+
+    window.addEventListener('orientationchange', () => {
+        makeAnimation();
+    });
 
     // pause animation if tab is hidden
     document.addEventListener('visibilitychange', () => {
