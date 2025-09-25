@@ -81,6 +81,11 @@ h2 {
   font-weight: inherit;
   color: #000000;
 }
+@media (max-width: 1024px) {
+  h2 {
+    margin-top: 1rem;
+  }
+}
 @media (max-width: 550px) {
   h2 {
     font-size: 2.5rem;
@@ -198,6 +203,15 @@ p {
   grid-auto-flow: column;
   grid-gap: 0.5rem;
   justify-content: start;
+}
+
+.header-wrapper {
+  margin-bottom: 1.7rem;
+}
+@media (max-width: 1024px) {
+  .header-wrapper {
+    margin-bottom: 0;
+  }
 }
 
 .tag {

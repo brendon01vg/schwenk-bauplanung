@@ -90,6 +90,9 @@ h2 {
   line-height: 123%;
   font-weight: inherit;
   color: $body-color;
+  @media (max-width: 1024px) {
+    margin-top: 1rem;
+  }
   @media (max-width: 550px) {
     font-size: 2.5rem;
     text-wrap: pretty;
@@ -208,6 +211,13 @@ p {
   grid-auto-flow: column;
   grid-gap: 0.5rem;
   justify-content: start;
+}
+
+.header-wrapper {
+  margin-bottom: 1.7rem;
+  @media (max-width: 1024px) {
+    margin-bottom: 0;
+  }
 }
 
 .tag {
