@@ -145,3 +145,48 @@ const swiperImpressions = new Swiper(".swiper-impressions", {
 })();
 
 
+// document.addEventListener("DOMContentLoaded", (event) => {
+//     gsap.registerPlugin(ScrollTrigger)
+//     // gsap code here!
+//
+//     gsap.to(".a", {
+//         y: 200,
+//         ease: "power3.in",
+//         scrollTrigger: {
+//             trigger: "#parallax-a",
+//             start: "center bottom-=500",
+//             end: "+=1800",
+//             scrub: true,
+//             markers: true
+//
+//         }
+//     });
+//
+//     gsap.to(".b", {
+//         y: -150,
+//         ease: "power3.in",
+//         scrollTrigger: {
+//             trigger: "#parallax-b",
+//             start: "top bottom+=500",
+//             end: "+=1500",
+//             scrub: true,
+//             markers: true
+//         }
+//     });
+//
+//     gsap.to(".c", {
+//         y: -200,
+//         ease: "power3.in",
+//         scrollTrigger: {
+//             trigger: "#parallax-b",
+//             start: "top bottom-=200",
+//             end: "+=1500",
+//             scrub: true,
+//             markers: true
+//
+//         }
+//     });
+//
+// });
+
+

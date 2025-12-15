@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/brendon01vg/schwenk-bauplanung#readme",
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
     "gsap": "^3.13.0",
     "sass": "^1.91.0",
     "swiper": "^11.2.10"
