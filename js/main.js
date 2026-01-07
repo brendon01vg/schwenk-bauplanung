@@ -32,7 +32,7 @@ const swiperDienstleistungen = new Swiper(".swiper-dienstleistungen", {
         // Size (Length) of Scrollbar Draggable Element in px
         dragSize: 'auto',
     },
-    slidesOffsetAfter: 40,
+    slidesOffsetAfter: 90,
     navigation: {
         nextEl: '.swiper-button-next',
     },
@@ -51,46 +51,9 @@ const swiperProjekte = new Swiper(".swiper-projekte", {
         // Size (Length) of Scrollbar Draggable Element in px
         dragSize: 'auto',
     },
-    slidesOffsetAfter: 40,
+    slidesOffsetAfter: 80,
     navigation: {
         nextEl: '.swiper-button-next',
-    },
-});
-
-const swiperTeam = new Swiper(".swiper-team", {
-    slidesPerView: 'auto', // default (mobile)
-    spaceBetween: 20,
-    scrollbar: {
-        el: '.swiper-scrollbar',
-        // Makes the Scrollbar Draggable
-        draggable: true,
-        // Snaps slider position to slides when you release Scrollbar
-        snapOnRelease: true,
-        // Size (Length) of Scrollbar Draggable Element in px
-        dragSize: 'auto',
-    },
-
-    // breakpoints: {
-    //     0: {
-    //         slidesOffsetAfter: 40,
-    //     },
-    // },
-    slidesOffsetAfter: 40,
-    navigation: {
-        nextEl: '.swiper-button-next',
-    },
-});
-
-const swiperImpressions = new Swiper(".swiper-impressions", {
-    loop: true,
-    pagination: {
-        el: '.swiper-pagination',
-        dynamicBullets: false,
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
     },
 });
 

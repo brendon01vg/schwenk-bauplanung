@@ -100,7 +100,7 @@ h2.white {
 
 h3 {
   font-family: "InterMedium", sans-serif;
-  font-size: 2.1vw;
+  font-size: 2.7vw;
   line-height: 123%;
   font-weight: inherit;
   margin: 0;
@@ -139,12 +139,6 @@ h4 {
 @media (max-width: 1024px) {
   h4 {
     font-size: 3.25vw;
-    text-wrap: pretty;
-  }
-}
-@media (max-width: 1024px) {
-  h4 {
-    font-size: 4.25vw;
     text-wrap: pretty;
   }
 }
@@ -328,7 +322,7 @@ p {
     font-size: 2.5vw;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .lead {
     font-size: 4vw;
   }
@@ -507,8 +501,13 @@ nav ul li .tag {
   position: absolute;
   bottom: 0;
   z-index: 2;
-  width: 100%;
+  width: 60%;
   padding: 1rem calc((100vw - 94%) / 2 + 0.6rem) 0 calc((100vw - 94%) / 2 + 0.6rem);
+}
+@media (max-width: 1500px) {
+  #hero .hero-text {
+    width: 100%;
+  }
 }
 
 .ansprechpartner {
@@ -544,13 +543,8 @@ nav ul li .tag {
   justify-content: center;
 }
 .ablauf-nav .icon-wrapper img {
-  height: 12vw;
+  height: 6vw;
   width: auto;
-}
-@media (min-width: 3000px) {
-  .ablauf-nav .icon-wrapper img {
-    height: 8vw;
-  }
 }
 @media (max-width: 1024px) {
   .ablauf-nav .icon-wrapper img {
@@ -632,22 +626,18 @@ nav ul li .tag {
 }
 #ansprechpartner .container .img-text h3 {
   grid-column: span 4;
+  text-wrap: pretty;
 }
-@media (max-width: 700px) {
+@media (max-width: 550px) {
   #ansprechpartner .container .img-text h3 {
     margin-top: 3rem;
     font-size: 1.75rem;
     text-wrap: pretty;
   }
 }
-@media (min-width: 1920px) {
+@media (max-width: 700px) {
   #ansprechpartner .container .img-text h3 {
-    font-size: 2.5rem;
-  }
-}
-@media (min-width: 2300px) {
-  #ansprechpartner .container .img-text h3 {
-    font-size: 3rem;
+    margin-top: 3rem;
   }
 }
 @media (max-width: 1024px) {
@@ -731,6 +721,11 @@ nav ul li .tag {
     font-size: 2vw;
   }
 }
+@media (max-width: 550px) {
+  #baupartner .container .card-wrapper .card h4 {
+    font-size: 3.25vw;
+  }
+}
 #baupartner .container .xp-wrapper {
   display: grid;
   grid-template-columns: 2fr 2fr 2fr;
@@ -806,11 +801,11 @@ nav ul li .tag {
   margin-top: 0.25em;
 }
 #dienstleistungen .swiper-dienstleistungen .swiper-wrapper .swiper-slide img, #dienstleistungen .swiper-projekte .swiper-wrapper .swiper-slide img, #dienstleistungen .swiper-team .swiper-wrapper .swiper-slide img, #projekte .swiper-dienstleistungen .swiper-wrapper .swiper-slide img, #projekte .swiper-projekte .swiper-wrapper .swiper-slide img, #projekte .swiper-team .swiper-wrapper .swiper-slide img, #team .swiper-dienstleistungen .swiper-wrapper .swiper-slide img, #team .swiper-projekte .swiper-wrapper .swiper-slide img, #team .swiper-team .swiper-wrapper .swiper-slide img {
-  width: 32.3rem;
-  height: 32.3rem;
+  width: 30vw;
+  height: 30vw;
   display: block;
 }
-@media (max-width: 800px) {
+@media (max-width: 1300px) {
   #dienstleistungen .swiper-dienstleistungen .swiper-wrapper .swiper-slide img, #dienstleistungen .swiper-projekte .swiper-wrapper .swiper-slide img, #dienstleistungen .swiper-team .swiper-wrapper .swiper-slide img, #projekte .swiper-dienstleistungen .swiper-wrapper .swiper-slide img, #projekte .swiper-projekte .swiper-wrapper .swiper-slide img, #projekte .swiper-team .swiper-wrapper .swiper-slide img, #team .swiper-dienstleistungen .swiper-wrapper .swiper-slide img, #team .swiper-projekte .swiper-wrapper .swiper-slide img, #team .swiper-team .swiper-wrapper .swiper-slide img {
     height: 25rem;
     width: 20rem;
@@ -843,12 +838,12 @@ nav ul li .tag {
 }
 
 #dienstleistungen .swiper-dienstleistungen .swiper-wrapper .swiper-slide img, #dienstleistungen .swiper-projekte .swiper-wrapper .swiper-slide img, #projekte .swiper-dienstleistungen .swiper-wrapper .swiper-slide img, #projekte .swiper-projekte .swiper-wrapper .swiper-slide img {
-  max-height: 32.3rem;
+  max-height: 30vw;
   display: block;
-  max-width: 32.3rem;
+  max-width: 30vw;
   object-fit: cover;
 }
-@media (max-width: 800px) {
+@media (max-width: 1300px) {
   #dienstleistungen .swiper-dienstleistungen .swiper-wrapper .swiper-slide img, #dienstleistungen .swiper-projekte .swiper-wrapper .swiper-slide img, #projekte .swiper-dienstleistungen .swiper-wrapper .swiper-slide img, #projekte .swiper-projekte .swiper-wrapper .swiper-slide img {
     max-width: 20rem;
     max-height: 25rem;
