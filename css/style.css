@@ -217,6 +217,7 @@ p {
 .impressum-container {
   max-width: 30rem;
   margin: 6rem auto 9rem auto;
+  padding: 0 1rem;
   text-wrap: pretty;
 }
 .impressum-container li::marker {
