@@ -108,50 +108,50 @@ const swiperProjekte = new Swiper(".swiper-projekte", {
 })();
 
 
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.matchMedia().add("(min-width: 768px)", () => {
-    // GSAP code for screens >= 768px
-
-    gsap.to(".a", {
-        yPercent: 40,
-        ease: "power3.out",
-        scrollTrigger: {
-            trigger: "#parallax-a",
-            start: "top center",
-            end: "bottom",
-            scrub: true
-        }
-    });
-
-    gsap.to(".b", {
-        y: -100,
-        ease: "power3.out",
-        scrollTrigger: {
-            trigger: "#parallax-a",
-            start: "top+=800 center",
-            end: "bottom+=600",
-            scrub: true
-
-        }
-    });
-
-    gsap.to(".c", {
-        y: -150,
-        ease: "power3.out",
-        scrollTrigger: {
-            trigger: "#parallax-a",
-            start: "top+=400 center",
-            end: "bottom+=200",
-            scrub: true
-        }
-    });
-
-    return () => {
-        // optional cleanup when leaving this media query
-        ScrollTrigger.getAll().forEach(st => st.kill());
-    };
-});
+// gsap.registerPlugin(ScrollTrigger);
+//
+// gsap.matchMedia().add("(min-width: 768px)", () => {
+//     // GSAP code for screens >= 768px
+//
+//     gsap.to(".a", {
+//         yPercent: 40,
+//         ease: "power3.out",
+//         scrollTrigger: {
+//             trigger: "#parallax-a",
+//             start: "top center",
+//             end: "bottom",
+//             scrub: true
+//         }
+//     });
+//
+//     gsap.to(".b", {
+//         y: -100,
+//         ease: "power3.out",
+//         scrollTrigger: {
+//             trigger: "#parallax-a",
+//             start: "top+=800 center",
+//             end: "bottom+=600",
+//             scrub: true
+//
+//         }
+//     });
+//
+//     gsap.to(".c", {
+//         y: -150,
+//         ease: "power3.out",
+//         scrollTrigger: {
+//             trigger: "#parallax-a",
+//             start: "top+=400 center",
+//             end: "bottom+=200",
+//             scrub: true
+//         }
+//     });
+//
+//     return () => {
+//         // optional cleanup when leaving this media query
+//         ScrollTrigger.getAll().forEach(st => st.kill());
+//     };
+// });
 
 
 
